@@ -79,7 +79,8 @@
   <script>
     async function carregarPropostas() {
       try {
-        const response = await fetch("http://localhost:3001/propostas");
+        // 🔧 Endpoint atualizado para o backend no Render
+        const response = await fetch("https://proposta-express-backend-1.onrender.com/propostas");
         const propostas = await response.json();
 
         const tbody = document.getElementById("propostasTable");
