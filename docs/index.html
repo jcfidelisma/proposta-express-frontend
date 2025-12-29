@@ -81,6 +81,14 @@
                 <label for="email" class="form-label">E-mail do destinatário</label>
                 <input type="email" class="form-control" id="email" required>
               </div>
+              <div class="mb-3">
+                <label for="prazo" class="form-label">Prazo da proposta</label>
+                <select class="form-select" id="prazo" name="prazo" required>
+                  <option value="7">7 dias</option>
+                  <option value="15">15 dias</option>
+                  <option value="30">30 dias</option>
+                </select>
+              </div>
               <button type="submit" class="btn btn-custom w-100">Enviar Proposta</button>
             </form>
             <div id="status" class="mt-3 text-center"></div>
