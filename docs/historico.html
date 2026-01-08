@@ -60,7 +60,7 @@
                   <th>Valor</th>
                   <th>Descrição</th>
                   <th>E-mail</th>
-                  <th>Validade</th> <!-- nova coluna -->
+                  <th>Validade</th>
                   <th>Data de Envio</th>
                   <th>Status</th>
                 </tr>
@@ -113,9 +113,17 @@
             <td>${validadeStatus}</td>
             <td>${p.data_envio}</td>
             <td>
-              ${p.status === "Enviado" 
-                ? '<span class="badge bg-success">Enviado</span>' 
-                : '<span class="badge bg-danger">Falha</span>'}
+              ${
+                p.status === "Enviado"
+                  ? '<span class="badge bg-success">Enviado</span>'
+                  : p.status === "Falha"
+                  ? '<span class="badge bg-danger">Falha</span>'
+                  : p.status === "Aceita"
+                  ? '<span class="badge bg-primary">Aceita</span>'
+                  : p.status === "Recusada"
+                  ? '<span class="badge bg-warning text-dark">Recusada</span>'
+                  : '<span class="badge bg-secondary">Pendente</span>'
+              }
             </td>
           </tr>
         `;
@@ -141,4 +149,3 @@
     </footer>
 </body>
 </html>
-
